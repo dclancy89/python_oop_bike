@@ -16,6 +16,7 @@ class Bike(object):
 
 	def reverse(self):
 		self.miles -= 5
+		# if the miles go negative, set it to zero. Can't have negative miles.
 		if self.miles < 0:
 			self.miles = 0
 		return self
@@ -31,3 +32,7 @@ print " "
 bike2.ride().ride().reverse().reverse().displayInfo()
 print " "
 bike3.reverse().reverse().displayInfo()
+
+
+
+# All the methods except for the __init__ can return self to chain.
